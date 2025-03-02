@@ -41,8 +41,8 @@ function toggleTheme() {
     </nav>
     <h1 class="title">{{ routeData.componentName }}</h1>
       <div class="logo-container">
-      <a href="https://discord.gg/5a2PCNN9gy">
-        <img src="https://raw.githubusercontent.com/Muhaddil/simple-link-randomizer/refs/heads/main/images/SAEDLogo.png" alt="Logo SAED" class="saed-logo" />
+      <a href="https://discord.gg/nSXdES2m3f">
+        <img src="https://raw.githubusercontent.com/AmakeAFK/Formulario-Oposicion/refs/heads/main/public/images/Burger_Shot.webp" alt="Logo SAED" class="saed-logo" />
       </a>
     </div>
   </header>
