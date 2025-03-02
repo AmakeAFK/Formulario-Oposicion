@@ -31,9 +31,7 @@ function toggleTheme() {
   <header>
     <nav class="navbar">
       <ul>
-        <li><a href="https://muhaddil.github.io/saed-web-page/">Página Principal</a></li>
-        <li><a href="https://muhaddil.github.io/saed-web-page/faq.html">FAQs</a></li>
-        <li><a href="https://muhaddil.github.io/saed-web-page/promotions.html">Ascensos</a></li>
+        <li><a href="https://amakeafk.github.io/BurgerShot/">Página Principal</a></li>
         <li>
           <button class="theme-toggle" @click="toggleTheme">
             Cambiar a {{ isDark ? 'Claro' : 'Oscuro' }}
