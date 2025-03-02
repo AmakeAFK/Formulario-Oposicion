@@ -13,12 +13,6 @@ export default defineConfig({
       input: [
         'index.html',
         'form1.html',
-        'form2.html',
-        'form3.html',
-        'trasladosform.html',
-        'SAFDForm1.html',
-        'SAFDForm2.html',
-        'SAFDForm3.html',
       ],
     },
   },

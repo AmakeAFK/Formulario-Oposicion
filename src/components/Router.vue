@@ -13,12 +13,6 @@ interface RouterObj {
 
 const router: Record<string, RouterObj> = {
   form1: { component: 'Form1', requiresData: false},
-  form2: { component: 'Form2', requiresData: false},
-  form3: { component: 'Form3', requiresData: false },
-  SAFDForm1: { component: 'SAFDForm1', requiresData: false },
-  SAFDForm2: { component: 'SAFDForm2', requiresData: false },
-  SAFDForm3: { component: 'SAFDForm3', requiresData: false },
-  trasladosform: { component: 'TrasladosForm', requiresData: false },
   index: { component: 'Home', requiresData: false },
 };
 
