@@ -12,15 +12,9 @@ const ageOOC = ref('');
 const discordId = ref('');
 const steamUrl = ref('');
 const dailyTime = ref('');
-const emsRoleKnowledge = ref('');
-const previousExperiences = ref('');
+const experiencePrevious = ref('');
 const whyChooseMe = ref('');
-const exampleMe = ref('');
-const exampleDo = ref('');
-const medicationForInfection = ref('');
-const defineDM = ref('');
-const definePG = ref('');
-const defineCarjack = ref('');
+const whyUsAndNotOther = ref('');
 const successMessage = ref('');
 const errorMessage = ref('');
 
@@ -29,17 +23,12 @@ async function handleSubmit() {
     `- **Nombre y Apellidos IC:** ${name.value}`,
     `- **Edad IC:** ${ageIC.value}`,
     `- **Edad OOC:** ${ageOOC.value}`,
-    `- **ID de Discord:** ${discordId.value}`,
-    `- **URL de Steam:** ${steamUrl.value}`,
+    `- **Nombre de Discord:** ${discordId.value}`,
+    `- **Steam:** ${steamUrl.value}`,
     `- **Tiempo Disponible Diario:** ${dailyTime.value}`,
-    `- **Conocimiento del Rol de EMS:** ${emsRoleKnowledge.value}`,
-    `- **Experiencias en Otras Ciudades:** ${previousExperiences.value}`,
-    `- **Ejemplo de /me:** ${exampleMe.value}`,
-    `- **Ejemplo de /do:** ${exampleDo.value}`,
-    `- **¿Qué medicamentos usarías para una infección?:** ${medicationForInfection.value}`,
-    `- **Define DM:** ${defineDM.value}`,
-    `- **Define PG:** ${definePG.value}`,
-    `- **Define Carjack:** ${defineCarjack.value}`,
+    `- **Experiencia previa:** ${experienciePrevious.value}`,
+    `- **¿Por qué deberiamos escogerte?:** ${whyCooseMe.value}`,
+    `- **¿Por qué nosotros y no el Salieri's?:** ${whyUsAndNotOther.value}`,
   ];
 
   try {
@@ -118,15 +107,9 @@ function resetForm() {
   discordId.value = '';
   steamUrl.value = '';
   dailyTime.value = '';
-  emsRoleKnowledge.value = '';
-  previousExperiences.value = '';
+  experiencePrevious.value = '';
   whyChooseMe.value = '';
-  exampleMe.value = '';
-  exampleDo.value = '';
-  medicationForInfection.value = '';
-  defineDM.value = '';
-  definePG.value = '';
-  defineCarjack.value = '';
+  whyUsAndNotOther.value = '';
 }
 </script>
 
@@ -139,30 +122,18 @@ function resetForm() {
         :maxlength="2" />
       <FormField id="ageOOC" label="Edad OOC" type="text" placeholder="Ingresa tu edad OOC" v-model="ageOOC" required
         :maxlength="2" />
-      <FormField id="discordId" label="ID de Discord" type="text" placeholder="Ingresa tu ID de Discord"
+      <FormField id="discordId" label="ID de Discord" type="text" placeholder="Ingresa tu nombre de Discord"
         v-model="discordId" required />
-      <FormField id="steamUrl" label="URL de Steam" type="url" placeholder="Ingresa tu URL de Steam" v-model="steamUrl"
+      <FormField id="steamUrl" label="URL de Steam" type="url" placeholder="Ingresa tu nombre de Steam" v-model="steamUrl"
         required />
       <FormField id="dailyTime" label="Tiempo Disponible Diario" type="text" placeholder="Ejemplo: 2 horas diarias"
         v-model="dailyTime" required />
-      <FormTextarea id="emsRoleKnowledge" label="Conocimiento del Rol de EMS"
-        placeholder="Describe tu conocimiento sobre el rol de EMS" v-model="emsRoleKnowledge" required />
-      <FormTextarea id="previousExperiences" label="Experiencias en Otras Ciudades"
-        placeholder="Describe tus experiencias previas" v-model="previousExperiences" required />
+      <FormTextarea id="experiencePrevious" label="Experiencia Previa"
+        placeholder="Dinos tu experiencia en el ambito de la hosteleria" v-model="experiencePrevious" required />
       <FormTextarea id="whyChooseMe" label="¿Por qué deberíamos elegirte?"
         placeholder="Explica por qué deberíamos elegirte" v-model="whyChooseMe" required />
-      <FormTextarea id="exampleMe" label="Ejemplo de /me" placeholder="Proporciona un ejemplo de /me"
-        v-model="exampleMe" required />
-      <FormTextarea id="exampleDo" label="Ejemplo de /do" placeholder="Proporciona un ejemplo de /do"
-        v-model="exampleDo" required />
-      <FormTextarea id="medicationForInfection" label="¿Qué medicamentos usarías para una infección?"
-        placeholder="Describe los medicamentos que usarías" v-model="medicationForInfection" required />
-      <FormTextarea id="defineDM" label="Define DM" placeholder="Define DM con tus palabras" v-model="defineDM"
-        required />
-      <FormTextarea id="definePG" label="Define PG" placeholder="Define PG con tus palabras" v-model="definePG"
-        required />
-      <FormTextarea id="defineCarjack" label="Define Carjack" placeholder="Define Carjack con tus palabras"
-        v-model="defineCarjack" required />
+      <FormTextarea id="whyUsAndNotOther" label="¿Por qué nosotros y no el Salieri's?"
+        placeholder="Explica porque nos eliges a nosotros y no al Salieri's" v-model="whyUsAndNotOther" required />
       <button type="submit">Enviar</button>
     </form>
     <div v-if="successMessage" class="toast success">{{ successMessage }}</div>
